@@ -1,0 +1,29 @@
+/* navigation bar */
+.navbar{
+    background-color: rgb(31, 58, 88);
+    height: 60px;
+}
+/* brand name */
+.navbar div h3{
+    color: blanchedalmond;
+    /* text-shadow: 2px 2px 5px red; */
+    font-weight: bold;
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 4px;
+}
+/* menu */
+.flex-container-header{
+    display: flex;
+    flex-flow: row wrap;
+    color: blanchedalmond;
+    justify-content: end;   
+}
+.flex-container-header div{
+    padding: 10px 15px 10px 15px;
+    color: wheat;
+}
+.flex-container-header a:hover{
+    background-color: rgb(82, 160, 153);
+    transition: background 1s;
+    text-decoration: none;
+}

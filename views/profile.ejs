@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="/css/navigation_bar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <script src="/jquery/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <!-- ///////////////////////fonts////////////////// -->
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+    <!-- /////////////////facebook and linked icon//////////////////////// -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/c8b93cc3c2.js" crossorigin="anonymous"></script>
+    <title>Profile</title>
+</head>
+<body>
+    <%- include('template/navigation_bar'); -%>
+    <div id="main">
+        <div id="main-left">
+            <div><label for="waterusagesdaily">water usages(current) : </label><span>12 litres</span> </div>
+            <div><label for="watersaved">water saved : </label><span>4 litres</span> </div>  
+            <div><label for="numberofleaks">Leak found : </label>None </div> 
+            <div><label for="waterusagesweekly">water usages(weekly) : </label><span>150 litres</span> </div> 
+            <div><label for="waterusagesmonthly">water usages(monthly) : </label><span>800 litres</span> </div> 
+
+        </div>
+
+        <div id="main-right">
+            <div id="main-right-heading">About Me</div>
+            <div id="user_image"><img src="/images/profile.png" alt="profile pic"></div>
+
+            <div id="user_info">
+                <div ><label for="name">Name : </label> <span>Amar Kumar</span></div>
+                <div ><label for="userid">USER ID : </label> <span>CED17I029</span></div>
+                <div ><label for="address">Address : </label><span>Manpur BN sahaylane</span></div>
+                <div ><label for="productid">PRODUCT ID : </label><span>WAT667</span></div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <%- include('template/footer');-%>
+</body>
+</html>

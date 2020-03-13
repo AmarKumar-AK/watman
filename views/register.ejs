@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Watman</title>
+	<link rel="stylesheet" href="/css/navigation_bar.css">
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/footer.css">
+	<link rel="stylesheet" href="/css/register.css">
+	<script src="/jquery/jquery.js"></script>
+	<script src="/bootstrap/js/bootstrap.js"></script>
+	<!-- /////////////////facebook and linked icon//////////////////////// -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/c8b93cc3c2.js" crossorigin="anonymous"></script>
+	<script> 
+          
+		// Function to check Whether both passwords 
+		// is same or not. 
+		function checkPassword(form) { 
+			password = form.password.value; 
+			confirmpassword = form.confirmpassword.value; 
+			// If password not entered 
+			if (password == '') 
+				alert ("Please enter Password"); 
+			// If confirm password not entered 
+			else if (confirmpassword == '') 
+				alert ("Please enter confirm password");  
+			// If Not same return False.     
+			else if (password != confirmpassword) { 
+				alert ("\nPassword did not match: Please try again...") 
+				return false; 
+			} 
+			// If same return True. 
+			else{ 
+				alert("Password Match: Welcome to WATMAN") 
+				return true; 
+			} 
+		} 
+	</script> 
+</head>
+
+<body>
+	<%- include('template/navigation_bar'); -%>
+	<div id="main">
+		<h1>Register</h1>
+		<form action="/register" method="POST" onSubmit = "return checkPassword(this)">
+			<div class="form-group">
+				<label for="formGroupExampleInput">Full Name</label>
+				<input type="text" name="fullname" class="form-control" id="formGroupExampleInput" placeholder="Amar kumar">
+			</div>
+			<div class="form-group">
+				<label for="formGroupExampleInput">Email ID</label>
+				<input type="email" name="email" class="form-control" id="formGroupExampleInput" placeholder="example@xyz.com">
+			</div>
+			<div class="form-group">
+				<label for="formGroupExampleInput2">Password</label>
+				<input type="password" name="password" class="form-control" id="formGroupExampleInput2" placeholder="password">
+			</div>
+			<div class="form-group">
+				<label for="formGroupExampleInput2">Confirm Password</label>
+				<input type="password" name="confirmpassword" class="form-control" id="formGroupExampleInput2" placeholder="confirm password">
+			</div>
+			<input type="submit" value="Submit" class="btn btn-primary"><br>
+		</form>
+	</div>
+
+	<%- include('template/footer');-%>
+
+</body>
+
+</html>
